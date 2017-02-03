@@ -1,0 +1,12 @@
+Sources for use by all platforms. It implements interface for pnvm plugin.
+PNVM plugin operates needs this interface to instrument particular hardware
+and to manage objects in memory.
+
+Header files are present in ../includes directory.
+
+Symlink pnvm_plugin_generated.c points to pnvm plugin source generated
+by VMMaker with Squeak.
+Script ./clean_plugin.py is used for its post-processing and generates
+../includes/pnvm_plugin.h and ./pnvm_plugin.cpp.
+To refresh pnvm_plugin.cpp code run:
+  $ make

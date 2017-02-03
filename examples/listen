@@ -1,0 +1,10 @@
+#!/bin/bash
+
+scriptdir=`dirname $0`
+[ -n $scriptdir ] && cd $scriptdir
+unset scriptdir
+
+DEVICE=${DEVICE:-$1}
+DEVICE=${DEVICE:-/dev/ttyACM0}
+
+exec ./common $DEVICE

@@ -1,0 +1,13 @@
+telnet 192.168.1.177
+
+[0, "load", "(NledControl(\"on\",\"off\",\"ok\",\"blink\",\"setpin\")(idle,command,done,state,blinker,pin,addr)(Uinput(x)(a,c)(P0,1,I1)(P6,1,V1)(G(=(h(V0))(V1)))(A(:(V2)(t(V0))))(O6,1,V1)(O1,1,V2))(Uoutput(y)()(P2,1,V0)(O0,1,I1))(I(O0,1,I1)(O3,1,I0)(O5,1,I3)(O6,1,I0))(Ton(x,p,c)(P1,1,V2)(G(=(h(V2))(S0)))(P3,1,V0)(P5,1,V1)(A(o(V1)(I1)))(O2,1,S2)(O3,1,I1)(O5,1,V1))(Toff(x,p,c)(P1,1,V2)(G(=(h(V2))(S1)))(P3,1,V0)(P5,1,V1)(A(o(V1)(I0)))(O2,1,S2)(O3,1,I0)(O5,1,V1))(Tblink(x,n,c)(P1,1,V2)(G(=(h(V2))(S3)))(P3,1,V0)(G(<(V0)(I2)))(A(:(V1)(+(I2)(%(V0)(I2)))))(O2,1,S2)(O3,1,V1)(Y4,1,I1,500))(Tstopbl(s,b,n)(P3,1,V0)(P4,1,V1)(G(<(V0)(I2)))(A(:(V2)(%(V0)(I2))))(O3,1,V2))(Tblinker(c,n,p)(P4,1,I1)(P3,1,V0)(P5,1,V2)(G(>(V0)(I1)))(A(:(V1)(+(I2)(%(+(V0)(I1))(I2)))))(A(o(V2)(%(V1)(I2))))(O3,1,V1)(O5,1,V2)(Y4,1,I1,500))(Tsetpin(c,p,n)(P1,1,V0)(G(=(h(V0))(S4)))(P5,1,V1)(G(ii(:(V2)(#(V0)(I1)))))(O5,1,V2)(O2,1,S0)))"]
+
+[0, "loadinst", "(nledControl(pidle(t1,I1))(pcommand)(pdone)(pstate(t1,0))(pblinker)(ppin(t1,6))(paddr(t1,1)))"]
+
+[0, "pass", [1, "on"]]
+
+[0, "pass", [1, "off"]]
+
+[0, "pass", [1, "blink"]]
+
+[0, "dump"]

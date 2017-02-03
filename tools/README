@@ -1,0 +1,9 @@
+Right now this contain only genplatform utility for making
+platform header file out of net template specification written in PNAL.
+It's a c++ application with the same requirements as pnvmx86:
+
+  * boost.program_options
+  * log4cxx
+
+Usage:
+  ./getplatform -i platform.txt -o ../includes/pnvm_platform.h

@@ -1,0 +1,25 @@
+function net_escape() {
+    echo "$1" | \
+        sed -e 's:\\\\:\\\\:g' -e 's:":\\":g' | tr '\n' ' ' | \
+        sed -e 's:\s*::g'
+}
+
+function dev_setup() {
+    stty -F $1 cs8 9600 ignbrk -brkint -icrnl -imaxbel -opost -onlcr \
+            -isig -icanon -iexten -echo -echoe -echok -echoctl -echoke \
+            noflsh -ixon -crtscts
+}
+
+DEVICE=${DEVICE:-$1}
+
+if [[ `basename $0` == "common" ]]; then
+    # we are being executed as a script
+    if [[ -z "$DEVICE" ]]; then
+        echo "missing device name!" >&2;
+        exit 1
+    fi
+    dev_setup $DEVICE
+    exec cat <$DEVICE
+fi
+
+# ex: ft=sh:sw=4:ts=4:et

@@ -1,0 +1,4 @@
+This directory contain *.txt files with net template codes in PNAL
+as a sources for tools/getplatform utility. These sources are
+translated to *.h files containing definitions for use by object
+memory at initialization.

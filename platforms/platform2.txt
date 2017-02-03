@@ -1,0 +1,83 @@
+(Nplatform
+    
+    (0, "setaddr","pass","load","create","dump",
+        "loadinst", "ok","failed","badcmd")
+    
+    (address,nets,message,output)
+    
+    (Uinput(m)(a,c)
+        (P0,1,V1)
+        
+        (G(=(h(V0))(V1)))
+        (A(:(V2)(t(V0))))
+        (O0,1,V1)
+        (O3,1,V2))
+    (Uoutput(x)()
+        (P4,1,V0)
+        (O2,1,I1))
+    
+    (I(O0,1,S0))
+
+    
+    (Tpass(n,c,m)
+        (P1,1,V0)
+        (P3,1,V1)
+        (G(=(h(V1))(S2)))
+        
+        (G(|(:(V2)(h(t(V1))))(I1)))
+        
+        (Dinput,V0,V2)
+        (O1,1,V0))
+
+    (Tbadcmd(m,c)
+        (P3,1,V0)
+        (G(!(|(|(|(=(:(V1)(h(V0)))(S1))
+                  (=(V1)(S2)))
+                (|(=(V1)(S3))
+                  (=(V1)(S4))))
+              (|(=(V1)(S5))
+                (=(V1)(S6))))))
+        (O4,1,S9))
+
+    (Tout(n,m)
+        (P1,1,V0)
+        
+        (Doutput,0,V1)
+        (O1,1,V0)
+        (O4,1,V1))
+
+    (Tdump(c,o)
+        (P3,1,V0)
+        (G(=(h(V0))(S5)))
+        (A(:(V1)(d)))
+        (O4,1,V1))
+
+    (Tload(c,r,o)
+        (P3,1,V0)
+        (G(=(h(V0))(S3)))
+        
+        (A(:(V1)(l(#(V0)(I1)))))
+        (A(:(V2)(#(a(a(na)(S8))(S7))(V1))))
+        (O4,1,V1))
+
+    (Tcreate(n,c)
+        (P3,1,V1)
+        (G(=(h(V1))(S4)))
+        (G(:(V0)(c(#(V1)(I1)))))
+        (O4,1,S7)
+        (O1,1,V0))
+
+    (Tloadinst(n,c,o)
+        (P3,1,V1)
+        (G(=(h(V1))(S6)))
+        (G(:(V0)(i(#(V1)(I1)))))
+        (O4,1,S7)
+        (O1,1,V0))
+
+    (Tsetaddr(c,o,a)
+        (P3,1,V0)
+        (P0,1,V1)
+        (G(=(h(V0))(S1)))
+        (A(:(V2)(#(V0)(I1))))
+        (O0,1,V2)
+        (O4,1,S7))
